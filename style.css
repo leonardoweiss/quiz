@@ -1,0 +1,14 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Trebuchet MS", Arial, Sans-serif;
+}
+
+header{
+	height: 62px;
+	background-color: #00B2FF;
+	text-align: center;
+}

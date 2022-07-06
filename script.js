@@ -17,5 +17,20 @@ var question5 = new Question('No sistema de numeração romano, qual o significa
 
 var container = document.querySelector('#container');
 
+var q = 0;
+
 quiz.push(question1, question2, question3, question4, question5);
 
+function createBox() {
+    let box = document.createElement('div');
+	box.id = 'box';
+	let image = document.createElement('img');
+	image.src = quiz[q].img;
+	let header = document.createElement('h4');
+	header.textContent = quiz[q].question;
+	box.appendChild(image);
+	box.appendChild(header);
+
+    container.appendChild(box);
+	++q;
+}

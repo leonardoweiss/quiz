@@ -31,3 +31,14 @@ img{
 	text-align: center;
 	margin-top: 15px;
 }
+
+#span1, #span2, #span3, #span4, #span5, #span6{
+	height: 20px;
+	width: 20px;
+	padding: 4px;
+	background-color: #00B2FF;
+	border-radius: 2px;
+	margin: 5px;
+	display: inline-block;
+	color: #fff;
+}

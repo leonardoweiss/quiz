@@ -67,3 +67,14 @@ function createBox(condition) {
 function toCheck(check) {
 
 }
+
+function createSpans() {
+    let count = 1;
+
+	for (var i = 0; i < quiz.length; i++) {
+		let span = document.createElement('div');
+		span.id = 'span'+ count;
+		span.textContent = count++;
+		container.appendChild(span);
+	}
+}

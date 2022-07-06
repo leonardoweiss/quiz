@@ -21,43 +21,47 @@ var q = 0;
 
 quiz.push(question1, question2, question3, question4, question5);
 
+var gameOver = 0;
 function createBox(condition) {
-    let box = document.createElement('div');
-	box.id = 'box';
-	let image = document.createElement('img');
-	image.src = quiz[q].img;
-	let header = document.createElement('h4');
-	header.textContent = quiz[q].question;
-	box.appendChild(image);
-	box.appendChild(header);
+    ++gameOver;
+	if (gameOver < quiz.length) {
+		let Box = document.querySelector('#box');
+		container.removeChild(Box);
 
-    const itens = quiz[q].alternatives;
-	var Length = itens.length;
-	let count = 1;
+		let box = document.createElement('div');
+		box.id = 'box';
+		let image = document.createElement('img');
+		image.src = quiz[q].img;
+		let header = document.createElement('h4');
+		header.textContent = quiz[q].question;
+		box.appendChild(image);
+		box.appendChild(header);
 
-	for (var i = 0; i < quiz.length; i++) {
-		let span = document.createElement('div');
-		span.id = 'span'+ count;
-		span.textContent = count++;
-		container.appendChild(span);
+		const itens = quiz[q].alternatives;
+		var Length = itens.length;
+		
+		for (var i = 0; i < Length; i++) {
+			let onlyOne = itens[Math.floor(Math.random() * itens.length)];
+			let excluir = itens.indexOf(onlyOne);
+			itens.splice(excluir, 1);
+
+			let bttn = document.createElement('button');
+			bttn.setAttribute('onclick','toCheck("' + onlyOne + '"), createBox()');
+			bttn.textContent = onlyOne;
+			box.appendChild(bttn);
+		}
+
+		container.appendChild(box);
+		++q;
+		
+	} else {
+		let Box = document.querySelector('#box');
+		container.removeChild(Box);
+		let h1 = document.createElement('h1');
+		h1.id = 'end';
+		h1.textContent = 'Parabéns!!! Você acertou: ' + right + ' perguntas!';
+		container.appendChild(h1);
 	}
-
-	for (var i = 0; i < Length; i++) {
-		let onlyOne = itens[Math.floor(Math.random() * itens.length)];
-		let excluir = itens.indexOf(onlyOne);
-		itens.splice(excluir, 1);
-
-		let bttn = document.createElement('button');
-		bttn.setAttribute('onclick','toCheck("' + onlyOne + '")');
-		bttn.textContent = onlyOne;
-		box.appendChild(bttn);
-	}
-
-    container.appendChild(box);
-	++q;
-    if (condition) {
-        
-    }
 }
 
 function toCheck(check) {

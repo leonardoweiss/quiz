@@ -97,3 +97,19 @@ h4{
 	padding-top: 10px;
 	margin-top: 125px;
 }
+
+@media screen and (max-width: 450px){
+    #container button:nth-child(3n){
+		border-radius: 0;
+	}
+	
+	#container button:last-child{
+		border-radius: 0;
+	}
+
+	#container button{
+		max-width: 510px;
+		width: 65%;
+		min-width: 360px;
+	}
+}

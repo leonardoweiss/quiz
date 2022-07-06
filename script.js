@@ -21,7 +21,7 @@ var q = 0;
 
 quiz.push(question1, question2, question3, question4, question5);
 
-function createBox() {
+function createBox(condition) {
     let box = document.createElement('div');
 	box.id = 'box';
 	let image = document.createElement('img');
@@ -31,6 +31,35 @@ function createBox() {
 	box.appendChild(image);
 	box.appendChild(header);
 
+    const itens = quiz[q].alternatives;
+	var Length = itens.length;
+	let count = 1;
+
+	for (var i = 0; i < quiz.length; i++) {
+		let span = document.createElement('div');
+		span.id = 'span'+ count;
+		span.textContent = count++;
+		container.appendChild(span);
+	}
+
+	for (var i = 0; i < Length; i++) {
+		let onlyOne = itens[Math.floor(Math.random() * itens.length)];
+		let excluir = itens.indexOf(onlyOne);
+		itens.splice(excluir, 1);
+
+		let bttn = document.createElement('button');
+		bttn.setAttribute('onclick','toCheck("' + onlyOne + '")');
+		bttn.textContent = onlyOne;
+		box.appendChild(bttn);
+	}
+
     container.appendChild(box);
 	++q;
+    if (condition) {
+        
+    }
+}
+
+function toCheck(check) {
+
 }

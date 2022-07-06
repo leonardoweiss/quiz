@@ -18,10 +18,12 @@ var question5 = new Question('No sistema de numeração romano, qual o significa
 var container = document.querySelector('#container');
 
 var q = 0;
+var c = -1;
+var right = 0;
 
 quiz.push(question1, question2, question3, question4, question5);
 
-var gameOver = 0;
+var gameOver = -1;
 function createBox(condition) {
     ++gameOver;
 	if (gameOver < quiz.length) {
@@ -64,8 +66,16 @@ function createBox(condition) {
 	}
 }
 
+var count = 1;
 function toCheck(check) {
+	c++;
 
+	if (check == quiz[c].Alternatives[3]) {
+		document.querySelector('#span' + count++).style.backgroundColor = '#2AFF00';
+		++right;
+	} else {
+		document.querySelector('#span' + count++).style.backgroundColor = '#FF0000';
+	}
 }
 
 function createSpans() {

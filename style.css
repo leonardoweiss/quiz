@@ -13,7 +13,7 @@ body{
 }
 
 header{
-	height: 5rem;
+	height: 4.8rem;
 	background-color: #00B2FF;
 	text-align: center;
 }
@@ -26,11 +26,8 @@ h1{
 }
 
 img{
-	max-width: 510px;
-	max-height: 340px;
-	width: 65%;
-	min-height: 220px;
-	min-width: 360px;
+	width: 510px;
+	height: 340px;
 	border-radius: 6px 6px 0 0;
 	margin-top: 18px;
 	margin-bottom: 0;
@@ -55,7 +52,7 @@ h4{
 	margin-top: 15px;
 }
 
-#span1, #span2, #span3, #span4, #span5, #span6{
+#span1, #span2, #span3, #span4, #span5, #span6, #span7, #span8, #span9, #span10{
 	height: 20px;
 	width: 20px;
 	padding: 4px;
@@ -72,8 +69,9 @@ h4{
 	text-transform: uppercase;
 	padding: 4px 8px;
 	font-weight: bold;
+	height: fit-content;
 	margin: 5px;
-	width: 160px;
+	width: 200px;
 	color: #00B2FF;
 	font-family: 'Nunito', sans-serif;
 }
@@ -111,5 +109,10 @@ h4{
 		max-width: 510px;
 		width: 65%;
 		min-width: 360px;
+	}
+
+	img{
+		height: 220px;
+		width: 360px;
 	}
 }

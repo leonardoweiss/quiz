@@ -9,11 +9,16 @@ class Question{
 
 const quiz = [];
 
-var question1 = new Question('Paracetamol é uma palavra:', 'Proparoxítona', 'inexistente', 'paroxítona', 'oxítona', 'img/paracetamol.jpg');
-var question2 = new Question('A capital da Paraíba é:', 'Recife', 'Natal', 'Teresina', 'João Pessoa', 'img/paraiba.jpeg');
-var question3 = new Question('Qual é o nome dado para quando a água passa de seu estado gasoso para o estado líquido?', 'Vaporização', 'Fusão', 'Sublimação', 'Condesação', 'img/agua.jpg');
-var question4 = new Question('Quantas sílabas possui a palavra "Substantivo"?', '5 sílabas', '6 sílabas', '3 sílabas', '4 sílabas', 'img/substantivo.jpg');
-var question5 = new Question('No sistema de numeração romano, qual o significado do símbolo "DC"?', '1100', '400', '40', '600', 'img/romanos.jpg');
+var question1 = new Question('Organela de uma célula vegetal, responsável pela fotossíntese:', 'Mitocôndria', 'Complexo de Golgi', 'Ribossomos', 'Cloroplastos', 'img/planta.jpg');
+var question2 = new Question('De quem é a famosa frase “Penso, logo existo”?', 'Platão', 'Aristóteles', 'Francis Bacon', 'Descartes', 'img/filosofia.png');
+var question3 = new Question('Qual o nome do presidente do Brasil que ficou conhecido como Jango?', ' Jânio Quadros', 'João Figueiredo', 'Getúlio Vargas', 'João Goulart', 'img/presidente.webp');
+var question4 = new Question('Qual o livro mais vendido no mundo a seguir à Bíblia?', 'Harry Potter', 'O Pequeno Príncipe', ' O Senhor dos Anéis', 'Dom Quixote', 'img/livro.jpg');
+var question5 = new Question('Qual a nacionalidade de Che Guevara?', 'Cubana', 'Panamenha', 'Peruana', 'Argentina', 'img/che.jpg');
+var question6 = new Question('Quem é o autor de “O Príncipe”?', 'Montesquieu', 'Rousseau', 'Thomas Hobbes', 'Maquiavél', 'img/principe.jpg');
+var question7 = new Question('Em qual das orações abaixo a palavra foi empregada incorretamente?', 'Está mal cozido.', ' É um mau vendedor.', 'Esse é o mal de todos.', 'É um homem mal.', 'img/portugues.webp');
+var question8 = new Question('Júpiter e Plutão são os correlatos romanos de quais deuses gregos?', 'Zeus e Poseidon', 'Ares e Hermes', 'Cronos e Zeus', 'Zeus e Hades', 'img/mitologia.jpg');
+var question9 = new Question('Qual o nome do cientista que descobriu o processo de pasteurização?', 'Antoine Lavoisier', 'Blaise Pascal', 'Marie Curie', 'Louis Pasteur', 'img/cientista.jpg');
+var question10 = new Question('As pessoas de qual tipo sanguíneo são consideradas recebedores universais?', 'O', 'A', 'B', 'AB', 'img/sangue.webp');
 
 var container = document.querySelector('#container');
 
@@ -21,7 +26,7 @@ var q = 0;
 var c = -1;
 var right = 0;
 
-quiz.push(question1, question2, question3, question4, question5);
+quiz.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
 
 var gameOver = -1;
 function createBox(condition) {
